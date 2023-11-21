@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Telerik.Windows.Controls">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Controls.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Controls.Chart">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Controls.Chart.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Controls.DataVisualization">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Controls.Docking">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Controls.Docking.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Controls.GridView">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Controls.GridView.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Controls.GridView.Export">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Controls.GridView.Export.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Controls.Input">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Controls.Input.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Controls.Navigation">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Controls.Navigation.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Controls.RibbonView">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Data">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Documents.Core">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Documents.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Documents.Fixed">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Documents.Fixed.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Documents.Spreadsheet">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Zip">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Zip.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Controls.RichTextBox">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Controls.RichTextBox.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Documents.Flow">
+			<HintPath>C:\Downloads\Nuget\Telerik UI for WPF 2023 R2 SP1\WPF7\Telerik.Windows.Documents.Flow.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>

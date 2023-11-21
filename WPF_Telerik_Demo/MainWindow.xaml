@@ -1,0 +1,51 @@
+﻿<Window x:Class="WPF_Telerik_Demo.MainWindow"
+        d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Telerik_Demo"
+	    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <telerik:HtmlDataProvider Name="htmlProvider" 
+                                  SetupDocument="htmlProvider_SetupDocument"
+                                  Html="{Binding Body, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                  RichTextBox="{Binding ElementName=BodyRichTextBox}">
+            <telerik:HtmlDataProvider.FormatProvider>
+                <telerik:HtmlFormatProvider>
+                    <telerik:HtmlFormatProvider.ExportSettings>
+                        <telerik:HtmlExportSettings StylesExportMode="Inline" 
+                                             DocumentExportLevel="Document"
+                                             ExportFontStylesAsTags="True"
+                                             StyleRepositoryExportMode="DontExportStyles"/>
+                    </telerik:HtmlFormatProvider.ExportSettings>
+                    <telerik:HtmlFormatProvider.ImportSettings>
+                        <telerik:HtmlImportSettings UseDefaultStylesheetForFontProperties="True"/>
+                    </telerik:HtmlFormatProvider.ImportSettings>
+                </telerik:HtmlFormatProvider>
+            </telerik:HtmlDataProvider.FormatProvider>
+        </telerik:HtmlDataProvider>
+
+        <telerik:RadRichTextBox x:Name="BodyRichTextBox" 
+                         VerticalContentAlignment="Top" 
+                         HorizontalContentAlignment="Left" 
+                         AcceptsReturn="True" 
+                         IsSpellCheckingEnabled="False"
+                         IsImageMiniToolBarEnabled="False"
+                         IsContextMenuEnabled="False"/>
+
+        <Button Content="See Source Code" Grid.Column="1" Height="30" Click="Button_Click" />
+        <telerik:RadWatermarkTextBox Grid.Column="2" Name="sourceCode" TextWrapping="Wrap" 
+                                     TextAlignment="Left" 
+                                     VerticalContentAlignment="Top"
+                                     AcceptsReturn="True"/>
+    </Grid>
+</Window>
