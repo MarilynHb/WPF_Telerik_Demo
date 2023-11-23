@@ -16,19 +16,21 @@
         </Grid.ColumnDefinitions>
 
         <telerik:HtmlDataProvider Name="htmlProvider" 
-                                  SetupDocument="htmlProvider_SetupDocument"
                                   Html="{Binding Body, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                   RichTextBox="{Binding ElementName=BodyRichTextBox}">
             <telerik:HtmlDataProvider.FormatProvider>
                 <telerik:HtmlFormatProvider>
                     <telerik:HtmlFormatProvider.ExportSettings>
                         <telerik:HtmlExportSettings StylesExportMode="Inline" 
-                                             DocumentExportLevel="Document"
-                                             ExportFontStylesAsTags="True"
-                                             StyleRepositoryExportMode="DontExportStyles"/>
+                                                    DocumentExportLevel="Document"
+                                                    ExportFontStylesAsTags="True"
+                                                    SpanExportMode="DefaultBehavior"
+                                                    ExportLocalOrStyleValueSource="True"
+                                                    ExportStyleMetadata="False"
+                                                    StyleRepositoryExportMode="DontExportStyles"/>
                     </telerik:HtmlFormatProvider.ExportSettings>
                     <telerik:HtmlFormatProvider.ImportSettings>
-                        <telerik:HtmlImportSettings UseDefaultStylesheetForFontProperties="True"/>
+                        <telerik:HtmlImportSettings UseDefaultStylesheetForFontProperties="True" />
                     </telerik:HtmlFormatProvider.ImportSettings>
                 </telerik:HtmlFormatProvider>
             </telerik:HtmlDataProvider.FormatProvider>
@@ -40,7 +42,9 @@
                          AcceptsReturn="True" 
                          IsSpellCheckingEnabled="False"
                          IsImageMiniToolBarEnabled="False"
-                         IsContextMenuEnabled="False"/>
+                         IsContextMenuEnabled="False"
+                         DocumentInheritsDefaultStyleSettings="True"
+                         FontFamily="Segoe UI"/>
 
         <Button Content="See Source Code" Grid.Column="1" Height="30" Click="Button_Click" />
         <telerik:RadWatermarkTextBox Grid.Column="2" Name="sourceCode" TextWrapping="Wrap" 

@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Media;
+using Telerik.Windows.Documents.Flow.FormatProviders.Html;
 using Telerik.Windows.Documents.Model;
 
 namespace WPF_Telerik_Demo;
@@ -19,20 +20,17 @@ public partial class MainWindow : Window
         this.BodyRichTextBox.Commands.ShowFindReplaceDialogCommand.Enabled = false;
         this.BodyRichTextBox.DocumentInheritsDefaultStyleSettings = true;
         this.BodyRichTextBox.Commands.ChangeListStyleCommand.Enabled = false;
-        this.BodyRichTextBox.FontFamily = new FontFamily("Segoe UI");
-        this.BodyRichTextBox.FontSize = 12;
+        this.BodyRichTextBox.DefaultStyleSettings.SetPropertyValue(Span.FontFamilyProperty, new FontFamily("Segoe UI"));
+        this.BodyRichTextBox.DefaultStyleSettings.SetPropertyValue(Span.FontSizeProperty, 12);
+        this.BodyRichTextBox.DefaultStyleSettings.SetPropertyValue(Paragraph.LineSpacingProperty, 1);
+        this.BodyRichTextBox.DefaultStyleSettings.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.Auto);
+        this.BodyRichTextBox.DefaultStyleSettings.SetPropertyValue(Paragraph.SpacingAfterProperty, 0);
+
+
     }
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
         this.sourceCode.Text = this.htmlProvider.Html;
-
-    }
-
-    private void htmlProvider_SetupDocument(object sender, Telerik.Windows.Documents.FormatProviders.SetupDocumentEventArgs e)
-    {
-        e.Document.ParagraphDefaultSpacingAfter = 0;
-        e.Document.LineSpacingType = LineSpacingType.Auto;
-        e.Document.LineSpacing = 1;
     }
 }
